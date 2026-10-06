@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оплата участия — FitFlow</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23e02448'/%3E%3Cpath d='M20 18h24v7H28v7h14v7H28v14h-8z' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="page-checkout">
+
+  <header class="header static">
+    <div class="container header-in">
+      <a class="logo" href="index.html" aria-label="FitFlow — на главную">
+        <span class="logo-mark">F</span>
+        <span class="logo-text">Fit<i>Flow</i></span>
+      </a>
+      <a class="back-link" href="index.html">
+        <svg class="ico" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg> Вернуться на сайт
+      </a>
+    </div>
+  </header>
+
+  <!-- ===================== ЭТАП: ФОРМА ОПЛАТЫ ===================== -->
+  <main class="checkout" id="checkoutStage">
+    <div class="blobs" aria-hidden="true">
+      <div class="blob b-pink"   data-para="0.08" style="top:-140px; left:-140px;"></div>
+      <div class="blob b-violet" data-para="-0.06" style="top:30%; right:-160px;"></div>
+      <div class="blob b-peach"  data-para="0.1"  style="bottom:-180px; left:30%; opacity:.35;"></div>
+    </div>
+
+    <div class="container checkout-in">
+      <div class="checkout-head">
+        <span class="eyebrow reveal">Остался один шаг</span>
+        <h1 class="reveal" style="--d:.08s">Оплата участия в&nbsp;клубе</h1>
+      </div>
+
+      <div class="checkout-grid">
+        <!-- Левая колонка: форма -->
+        <form class="glass-card form-card reveal" id="payForm" novalidate>
+          <h2>1. Твои данные</h2>
+          <p class="form-hint">Пришлём доступ в клуб и чек об оплате.</p>
+
+          <label class="field">
+            <span>Имя и фамилия</span>
+            <input type="text" name="name" id="fName" placeholder="Анна Смирнова" autocomplete="name" required>
+            <em class="err" data-for="fName">Укажи имя — так к тебе будет обращаться тренер</em>
+          </label>
+
+          <label class="field">
+            <span>E-mail</span>
+            <input type="email" name="email" id="fEmail" placeholder="you@mail.ru" autocomplete="email" required>
+            <em class="err" data-for="fEmail">Проверь адрес e-mail — на него придёт доступ</em>
+          </label>
+
+          <label class="field">
+            <span>Telegram <small>(необязательно)</small></span>
+            <input type="text" name="telegram" id="fTg" placeholder="@username" autocomplete="off">
+            <em class="err" data-for="fTg">Имя пользователя должно начинаться с @</em>
+          </label>
+
+          <h2>2. Способ оплаты</h2>
+          <div class="methods" role="radiogroup" aria-label="Способ оплаты">
+            <label class="method">
+              <input type="radio" name="pay" value="card" checked>
+              <span class="method-card">
+                <svg class="ico" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg>
+                <b>Банковская карта</b><small>Visa · Mastercard · Мир</small>
+              </span>
+            </label>
+            <label class="method">
+              <input type="radio" name="pay" value="sbp">
+              <span class="method-card">
+                <svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14h1v1h-1zM14 20h1v1h-1zM18 18h3v3h-3z"/></svg>
+                <b>СБП</b><small>по QR-коду или через банк</small>
+              </span>
+            </label>
+            <label class="method">
+              <input type="radio" name="pay" value="wallet">
+              <span class="method-card">
+                <svg class="ico" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 1 0-4h14v4"/><path d="M4 5v14a2 2 0 0 0 2 2h14V7"/><path d="M16 14h2"/></svg>
+                <b>Кошелёк</b><small>ЮMoney · SberPay</small>
+              </span>
+            </label>
+          </div>
+
+          <!--
+            TODO: подключение реальной оплаты.
+            Здесь вызывается имитация платежа (js/checkout.js).
+            Для боевого приёма платежей подключи ЮKassa / Prodamus / CloudPayments:
+            1) создай платёж на своём бэкенде и получи confirmation_url / token;
+            2) после успешного возврата пользователя покажи #successStage
+               и отправь письмо/сообщение боту для выдачи доступа в канал.
+          -->
+          <button type="submit" class="btn btn-primary btn-lg btn-block" id="payBtn">
+            <span class="btn-label">Оплатить 990 ₽</span>
+            <span class="btn-spinner" hidden></span>
+          </button>
+
+          <p class="legal">Нажимая «Оплатить», ты соглашаешься с <a href="#">условиями оферты</a> и <a href="#">политикой конфиденциальности</a>.</p>
+        </form>
+
+        <!-- Правая колонка: состав заказа -->
+        <aside class="summary-col">
+          <div class="glass-card summary reveal" style="--d:.12s">
+            <div class="sum-product">
+              <span class="sum-ico"><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M10 18h4"/></svg></span>
+              <div><b>Участие в клубе FitFlow</b><small>подписка на 1 месяц</small></div>
+            </div>
+            <ul class="sum-list">
+              <li><svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Полный тренировочный цикл</li>
+              <li><svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Новый цикл каждый месяц</li>
+              <li><svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Материалы по питанию</li>
+              <li><svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Доступ в закрытый Telegram-клуб</li>
+            </ul>
+            <div class="sum-total"><span>Итого сегодня</span><b>990 ₽</b></div>
+            <div class="sum-secure">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Оплата защищена. Данные карты не сохраняются.
+            </div>
+            <div class="timer">
+              <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              Цена 990 ₽ действует до&nbsp;23:59 сегодня&nbsp;·&nbsp;<span class="countdown" data-countdown>--:--:--</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===================== ЭТАП: УСПЕХ ===================== -->
+  <main class="checkout success" id="successStage" hidden>
+    <div class="blobs" aria-hidden="true">
+      <div class="blob b-pink"   data-para="0.08" style="top:-120px; right:-140px;"></div>
+      <div class="blob b-violet" data-para="-0.06" style="bottom:-160px; left:-120px;"></div>
+    </div>
+
+    <div class="container success-in">
+      <div class="success-card glass-card reveal-scale">
+        <div class="success-ring">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <span class="eyebrow">Оплата прошла</span>
+        <h1>Добро пожаловать в&nbsp;FitFlow!</h1>
+        <p class="success-mail">Мы отправили письмо со ссылкой на доступ на <b id="successEmail">твою почту</b>. Осталось сделать два шага:</p>
+
+        <ol class="success-steps">
+          <li>
+            <b>Открой письмо от FitFlow</b>
+            <span>Если его не видно — проверь папку «Спам» и «Промоакции».</span>
+          </li>
+          <li>
+            <b>Нажми «Вступить в клуб»</b>
+            <span>Ссылка откроет закрытый клуб в Telegram — тренировочный цикл и питание уже внутри.</span>
+          </li>
+        </ol>
+
+        <!--
+          TODO: подставь реальную ссылку-инвайт в закрытый канал / бота,
+          который автоматически добавляет оплативших (например, @ Tribute, Paywall-бот и т.п.)
+        -->
+        <a class="btn btn-primary btn-lg" href="https://t.me/fitflow_club" target="_blank" rel="noopener" id="tgLink">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+          Перейти в Telegram
+        </a>
+
+        <p class="success-note">Новый тренировочный цикл уже ждёт внутри. Первый месяц начнётся с первой же тренировки.</p>
+        <a class="back-link center" href="index.html">Вернуться на сайт</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/checkout.js"></script>
+</body>
+</html>

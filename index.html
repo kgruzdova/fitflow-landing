@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitFlow — весь фитнес-клуб в твоём телефоне</title>
+  <meta name="description" content="Закрытый фитнес-клуб в Telegram: готовые тренировочные циклы, новая программа каждый месяц и материалы по питанию. Тренируйся дома без поездок в зал.">
+  <meta property="og:title" content="FitFlow — весь фитнес-клуб в твоём телефоне">
+  <meta property="og:description" content="Готовая система тренировок и питания в закрытом Telegram-клубе. Новый цикл каждый месяц.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23e02448'/%3E%3Cpath d='M20 18h24v7H28v7h14v7H28v14h-8z' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- Полоса прогресса скролла -->
+  <div class="progress" id="progress"><span id="progressBar"></span></div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header" id="header">
+    <div class="container header-in">
+      <a class="logo" href="#top" aria-label="FitFlow — на главную">
+        <span class="logo-mark">F</span>
+        <span class="logo-text">Fit<i>Flow</i></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#system">О клубе</a>
+        <a href="#how">Как работает</a>
+        <a href="#trainer">Тренер</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-primary btn-sm" href="checkout.html">Вступить в клуб</a>
+        <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="blobs" aria-hidden="true">
+      <div class="blob b-pink"  data-para="0.10" style="top:-140px; left:-120px;"></div>
+      <div class="blob b-violet" data-para="-0.07" style="top:10%; right:-160px;"></div>
+      <div class="blob b-peach" data-para="0.12" style="bottom:-180px; left:32%;"></div>
+    </div>
+
+    <div class="container hero-in">
+      <div class="hero-copy">
+        <div class="chip reveal" style="--d:.05s">
+          <span class="dot"></span> закрытый клуб в Telegram
+        </div>
+
+        <h1 class="reveal" style="--d:.12s">Подтянутое тело без&nbsp;поездок в&nbsp;фитнес-клуб</h1>
+
+        <p class="hero-sub reveal" style="--d:.2s"><b>Весь фитнес-клуб — в&nbsp;твоём телефоне.</b></p>
+
+        <p class="hero-text reveal" style="--d:.28s">
+          Тренируйся дома по готовой программе, получай новый тренировочный цикл каждый месяц
+          и находи всю необходимую информацию по питанию в одном месте.
+        </p>
+
+        <p class="hero-text reveal" style="--d:.34s">
+          Никаких поездок в зал и бесконечного поиска тренировок в интернете.
+          Открываешь Telegram — и занимаешься тогда, когда удобно тебе.
+        </p>
+
+        <div class="hero-actions reveal" style="--d:.42s">
+          <a class="btn btn-primary btn-lg" href="checkout.html">
+            Вступить в клуб
+            <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <p class="hero-note reveal" style="--d:.5s">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+          Тренировки и питание в одном закрытом онлайн-пространстве.
+        </p>
+      </div>
+
+      <!-- Телефон с превью клуба -->
+      <div class="hero-visual reveal-scale" style="--d:.25s">
+        <div class="phone-wrap" data-mouse="14">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="tg-head">
+              <svg class="ico" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              <span class="tg-avatar">F</span>
+              <div class="tg-title"><b>FitFlow · клуб</b><small>закрытый канал</small></div>
+            </div>
+            <div class="tg-chat">
+              <div class="msg in">Доброе утро! Сегодня День 12 — ноги и кор</div>
+              <div class="msg card">
+                <span class="msg-tag">ТРЕНИРОВКА 12</span>
+                <b>Ноги и кор</b>
+                <small>25 минут · коврик</small>
+                <span class="msg-btn"><svg class="ico" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg> Открыть тренировку</span>
+              </div>
+              <div class="msg in">Разбор питания: что есть до и после занятия — уже в разделе «Питание»</div>
+              <div class="msg out">Тренировка завершена ✓</div>
+              <div class="msg service">Новый цикл — 1-го числа</div>
+              <div class="typing"><span></span><span></span><span></span></div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="float-chip f1" data-para="-0.05" data-mouse="26">
+          <svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+          Новый цикл каждый месяц
+        </div>
+        <div class="float-chip f2" data-para="0.08" data-mouse="24">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v8a2 2 0 0 0 2 2h3v5"/></svg>
+          Питание внутри
+        </div>
+        <div class="float-chip f3" data-para="-0.1" data-mouse="22">
+          <svg class="ico" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          990 ₽ — сегодня
+        </div>
+      </div>
+    </div>
+
+    <a class="scroll-hint" href="#pains" aria-label="Листай вниз">
+      <svg class="ico" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m6 13 6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <!-- ===================== БОЛИ ===================== -->
+  <section class="section pains" id="pains">
+    <div class="blobs soft" aria-hidden="true">
+      <div class="blob b-pink" data-para="0.06" style="top:6%; right:-180px; opacity:.28;"></div>
+    </div>
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Знакомо?</span>
+        <h2 class="reveal" style="--d:.08s">Хочешь заниматься собой, но&nbsp;фитнес не&nbsp;вписывается в&nbsp;твой график?</h2>
+      </div>
+
+      <div class="grid-3" data-stagger>
+        <article class="glass-card reveal">
+          <div class="card-ico"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>«После работы у&nbsp;меня уже нет сил ехать в&nbsp;зал»</h3>
+          <p>Дорога, переодевание и сама тренировка требуют времени. Когда день и без того расписан, занятие легко переносится на завтра — а потом ещё на неделю.</p>
+        </article>
+
+        <article class="glass-card reveal">
+          <div class="card-ico"><svg class="ico" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+          <h3>«Я не&nbsp;понимаю, какие тренировки делать и&nbsp;в&nbsp;каком порядке»</h3>
+          <p>Сегодня тренировка на ноги, завтра случайное видео на пресс, потом несколько дней перерыва. Упражнений много, но нет понятной системы, которой можно просто следовать.</p>
+        </article>
+
+        <article class="glass-card reveal">
+          <div class="card-ico"><svg class="ico" viewBox="0 0 24 24"><path d="M17 8c1-1 1-2.5 1-4-3 0-5 1-5.5 3"/><path d="M3 21c0-6 4-10 10-10 2 0 4-1 5-3 1 3 1 7-1 9-1.5 1.5-3 2-5 2-4 0-6 1-9 2z"/></svg></div>
+          <h3>«С&nbsp;питанием ещё сложнее»</h3>
+          <p>Что есть до тренировки? Нужно ли считать калории? Какие продукты выбирать? Чем больше информации вокруг, тем сложнее понять, что действительно применять каждый день.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== СИСТЕМА / О КЛУБЕ ===================== -->
+  <section class="section system" id="system">
+    <div class="blobs" aria-hidden="true">
+      <div class="blob b-violet" data-para="0.08" style="top:-120px; left:-160px;"></div>
+      <div class="blob b-pink" data-para="-0.06" style="bottom:-160px; right:-120px;"></div>
+    </div>
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Что внутри</span>
+        <h2 class="reveal" style="--d:.08s">Не&nbsp;ищи очередную тренировку — занимайся по&nbsp;готовой системе</h2>
+        <p class="lead reveal" style="--d:.16s">В&nbsp;<b>FitFlow</b> тренировки и питание собраны в одном закрытом онлайн-клубе. Тебе остаётся открыть Telegram и следовать программе.</p>
+      </div>
+
+      <div class="grid-3" data-stagger>
+        <article class="glass-card tilt reveal">
+          <div class="card-ico big"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <h3>Готовый тренировочный цикл</h3>
+          <p>Мы выстраиваем тренировки в последовательную программу — ты точно знаешь, какое занятие выполнять следующим.</p>
+          <p class="muted">Не нужно самостоятельно составлять план или каждый вечер искать подходящее видео.</p>
+        </article>
+
+        <article class="glass-card tilt reveal">
+          <div class="card-ico big"><svg class="ico" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.6-6.3"/><path d="M21 3v6h-6"/></svg></div>
+          <h3>Новая программа каждый месяц</h3>
+          <p>Тренировочный цикл обновляется ежемесячно. Ты получаешь новые тренировки и продолжаешь заниматься по готовому плану.</p>
+        </article>
+
+        <article class="glass-card tilt reveal">
+          <div class="card-ico big"><svg class="ico" viewBox="0 0 24 24"><path d="M3 2v7a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v8a2 2 0 0 0 2 2h3v5"/></svg></div>
+          <h3>Всё необходимое о&nbsp;питании</h3>
+          <p>В клубе собраны материалы по питанию, которые помогут разобраться с рационом и совместить его с тренировками.</p>
+          <p class="muted">Без необходимости искать советы по десяткам сайтов, блогов и каналов.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== КАК РАБОТАЕТ ===================== -->
+  <section class="section how" id="how">
+    <div class="blobs soft" aria-hidden="true">
+      <div class="blob b-peach" data-para="0.07" style="top:20%; left:-180px; opacity:.3;"></div>
+      <div class="blob b-pink" data-para="-0.05" style="bottom:0; right:-160px; opacity:.25;"></div>
+    </div>
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow reveal">3 шага</span>
+        <h2 class="reveal" style="--d:.08s">Как работает FitFlow</h2>
+        <p class="lead reveal" style="--d:.16s">Тебе не нужно разбираться в десятках программ и составлять расписание самостоятельно. Всё уже собрано внутри клуба.</p>
+      </div>
+
+      <div class="steps" data-stagger>
+        <article class="step glass-card reveal">
+          <span class="step-num">01</span>
+          <h3>Вступаешь в&nbsp;клуб</h3>
+          <p>Нажимаешь <b>«Вступить в клуб»</b>, оплачиваешь участие и получаешь доступ к закрытому пространству FitFlow в Telegram.</p>
+        </article>
+        <article class="step glass-card reveal">
+          <span class="step-num">02</span>
+          <h3>Открываешь готовый план</h3>
+          <p>Внутри тебя ждёт тренировочный цикл с последовательностью занятий и материалы по питанию.</p>
+          <p class="muted">Открываешь нужную тренировку — и занимаешься по инструкции.</p>
+        </article>
+        <article class="step glass-card reveal">
+          <span class="step-num">03</span>
+          <h3>Тренируешься в&nbsp;своём ритме</h3>
+          <p>Не нужно успевать к определённому часу. Выбираешь удобное время и занимаешься дома.</p>
+          <p class="muted">А в следующем месяце получаешь новый тренировочный цикл.</p>
+        </article>
+      </div>
+
+      <div class="center reveal" style="--d:.15s">
+        <a class="btn btn-primary btn-lg" href="checkout.html">
+          Вступить в клуб
+          <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+        <p class="under-btn"><svg class="ico" viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg> Весь FitFlow доступен прямо в Telegram.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ВСЕГДА С ТОБОЙ (тёмная) ===================== -->
+  <section class="section dark inside" id="inside">
+    <div class="blobs" aria-hidden="true">
+      <div class="blob b-red"    data-para="0.09" style="top:-120px; left:10%; opacity:.4;"></div>
+      <div class="blob b-violet" data-para="-0.06" style="bottom:-160px; right:-100px; opacity:.35;"></div>
+    </div>
+    <div class="container inside-in">
+      <div class="inside-copy">
+        <span class="eyebrow light reveal">Свобода</span>
+        <h2 class="reveal" style="--d:.08s">Фитнес-клуб, который всегда с&nbsp;тобой</h2>
+        <p class="reveal" style="--d:.14s">Не нужно подстраиваться под расписание зала или тратить время на дорогу.</p>
+        <p class="accent-p reveal" style="--d:.2s"><b>Открывай FitFlow в Telegram и тренируйся там, где тебе удобно: дома, в поездке или на отдыхе.</b></p>
+        <div class="reveal" style="--d:.28s">
+          <a class="btn btn-primary btn-lg" href="checkout.html">
+            Вступить в клуб
+            <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <aside class="glass-card dark checklist reveal-scale" style="--d:.2s">
+        <h3>Всё, что нужно для занятий, уже внутри:</h3>
+        <ul>
+          <li><span class="check"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span> полный тренировочный цикл;</li>
+          <li><span class="check"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span> пошаговая последовательность тренировок;</li>
+          <li><span class="check"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span> новый тренировочный цикл каждый месяц;</li>
+          <li><span class="check"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span> видео и инструкции по выполнению упражнений;</li>
+          <li><span class="check"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span> материалы и рекомендации по питанию;</li>
+          <li><span class="check"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span> доступ ко всем материалам клуба прямо в Telegram.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===================== ТРЕНЕР ===================== -->
+  <section class="section trainer" id="trainer">
+    <div class="blobs soft" aria-hidden="true">
+      <div class="blob b-pink" data-para="0.06" style="top:10%; left:-160px; opacity:.3;"></div>
+      <div class="blob b-violet" data-para="-0.05" style="bottom:-140px; right:-140px; opacity:.22;"></div>
+    </div>
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Автор программ</span>
+        <h2 class="reveal" style="--d:.08s">Кто составляет твои тренировки</h2>
+      </div>
+
+      <div class="trainer-in">
+        <div class="trainer-photo glass-card reveal-left">
+          <img class="trainer-shot" src="img/trainer.svg" width="800" height="1000" alt="Алина Соколова — фитнес-тренер FitFlow">
+          <span class="trainer-chip"><span class="dot"></span> Алина Соколова</span>
+        </div>
+
+        <div class="trainer-copy">
+          <h3 class="reveal">Привет, я <span class="accent">Алина Соколова</span></h3>
+          <p class="reveal" style="--d:.08s">Я фитнес-тренер и автор программ FitFlow.</p>
+          <p class="reveal" style="--d:.14s">Я создала клуб для тех, кто хочет регулярно заниматься собой, но не готов строить жизнь вокруг поездок в фитнес-зал.</p>
+          <p class="reveal" style="--d:.2s">Моя задача — убрать из тренировок лишнюю сложность. Тебе не придётся каждый день решать, какие упражнения выбрать и как собрать их в программу. Ты получаешь готовый тренировочный цикл и занимаешься по нему в удобное время.</p>
+
+          <h4 class="reveal" style="--d:.26s">Немного обо мне</h4>
+          <div class="stats" data-stagger>
+            <div class="stat glass-card reveal"><b>9 <small>лет</small></b><span>в фитнесе и тренировках</span></div>
+            <div class="stat glass-card reveal"><b>6 <small>лет</small></b><span>работы тренером</span></div>
+            <div class="stat glass-card reveal"><b>3 500+ <small>чел.</small></b><span>тренировались по моим программам</span></div>
+            <div class="stat glass-card reveal"><b class="small">Тренер-методист, ФАРМС</b><span>профессиональная подготовка</span></div>
+          </div>
+
+          <div class="reveal" style="--d:.3s">
+            <a class="btn btn-primary" href="checkout.html">
+              Вступить в клуб
+              <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ЗАЯВЛЕНИЕ (красная) ===================== -->
+  <section class="section statement">
+    <div class="container">
+      <h2 class="reveal">Не&nbsp;нужно ждать понедельника</h2>
+      <p class="reveal" style="--d:.08s">Ты получаешь готовую систему тренировок и питания, которую можно встроить в&nbsp;свой обычный график.</p>
+
+      <ul class="cross-list" data-stagger>
+        <li class="reveal"><svg class="ico" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg> Не нужно покупать абонемент в зал.</li>
+        <li class="reveal"><svg class="ico" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg> Не нужно тратить время на дорогу.</li>
+        <li class="reveal"><svg class="ico" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg> Не нужно самостоятельно составлять программу.</li>
+      </ul>
+
+      <p class="statement-final reveal" style="--d:.3s">Нужен только телефон и&nbsp;время на&nbsp;тренировку.</p>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section faq" id="faq">
+    <div class="blobs soft" aria-hidden="true">
+      <div class="blob b-peach" data-para="0.06" style="top:0; right:-170px; opacity:.3;"></div>
+    </div>
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow reveal">FAQ</span>
+        <h2 class="reveal" style="--d:.08s">Частые вопросы</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item glass-card reveal" data-faq>
+          <summary>Мне подойдёт клуб, если я давно не тренировалась?<span class="chev"><svg class="ico" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+          <div class="faq-body"><p>В клубе есть инструкции к тренировкам и упражнениям. Если у тебя есть ограничения по здоровью, травмы или хронические заболевания, перед началом занятий стоит обсудить нагрузку с врачом.</p></div>
+        </details>
+
+        <details class="faq-item glass-card reveal" data-faq>
+          <summary>Сколько времени занимают тренировки?<span class="chev"><svg class="ico" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+          <div class="faq-body"><p><span class="ph">20–30 минут</span>. Ты сама выбираешь удобное время для занятия — тренировки не привязаны к расписанию прямых эфиров.</p></div>
+        </details>
+
+        <details class="faq-item glass-card reveal" data-faq>
+          <summary>Мне понадобится спортивный инвентарь?<span class="chev"><svg class="ico" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+          <div class="faq-body"><p><span class="ph">Коврик, гантели или фитнес-резинки.</span> Часть тренировок выполняется без оборудования.</p></div>
+        </details>
+
+        <details class="faq-item glass-card reveal" data-faq>
+          <summary>Что происходит после оплаты?<span class="chev"><svg class="ico" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+          <div class="faq-body"><p>Ты получаешь доступ к закрытому онлайн-клубу FitFlow в Telegram. Там находятся текущий тренировочный цикл, инструкции и материалы по питанию.</p></div>
+        </details>
+
+        <details class="faq-item glass-card reveal" data-faq>
+          <summary>Как часто появляются новые тренировки?<span class="chev"><svg class="ico" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+          <div class="faq-body"><p>Новый тренировочный цикл публикуется <b>каждый месяц</b>. Тебе не придётся самостоятельно искать следующую программу после завершения текущей.</p></div>
+        </details>
+
+        <details class="faq-item glass-card reveal" data-faq>
+          <summary>Нужно ли заниматься каждый день?<span class="chev"><svg class="ico" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+          <div class="faq-body"><p>Нет. Ты следуешь расписанию тренировочного цикла и выбираешь удобное время для занятий.</p></div>
+        </details>
+
+        <details class="faq-item glass-card reveal" data-faq>
+          <summary>Нужно ли соблюдать строгую диету?<span class="chev"><svg class="ico" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+          <div class="faq-body"><p>FitFlow не строится вокруг идеи «идеального меню». В клубе ты получаешь материалы по питанию, которые помогают разобраться с рационом и применять рекомендации в обычной жизни.</p></div>
+        </details>
+
+        <details class="faq-item glass-card reveal" data-faq>
+          <summary>Можно ли заниматься в любое время?<span class="chev"><svg class="ico" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></span></summary>
+          <div class="faq-body"><p>Да. FitFlow находится в Telegram, поэтому ты открываешь тренировку тогда, когда это удобно тебе: утром, вечером или в выходной.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ФИНАЛ / ОФФЕР ===================== -->
+  <section class="section dark join" id="join">
+    <div class="blobs" aria-hidden="true">
+      <div class="blob b-red"    data-para="0.1"  style="top:-140px; right:8%; opacity:.45;"></div>
+      <div class="blob b-violet" data-para="-0.07" style="bottom:-180px; left:-120px; opacity:.4;"></div>
+      <div class="blob b-pink"   data-para="0.05" style="top:40%; left:45%; opacity:.3;"></div>
+    </div>
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow light reveal">Старт</span>
+        <h2 class="reveal" style="--d:.08s">Начни с&nbsp;первой тренировки, а&nbsp;не&nbsp;с&nbsp;очередного обещания себе</h2>
+        <p class="lead light reveal" style="--d:.16s">В FitFlow уже собрана система, которую не нужно создавать самостоятельно.</p>
+      </div>
+
+      <h3 class="join-sub reveal">Вступая в клуб, ты получаешь:</h3>
+      <div class="grid-4" data-stagger>
+        <div class="glass-card dark reveal"><b>Полный тренировочный цикл</b><p>Занятия собраны в последовательную программу — тебе не нужно решать, что тренировать сегодня.</p></div>
+        <div class="glass-card dark reveal"><b>Новый цикл каждый месяц</b><p>Заканчивается одна программа — появляется следующая.</p></div>
+        <div class="glass-card dark reveal"><b>Материалы по питанию</b><p>Вся необходимая информация собрана внутри клуба вместе с тренировками.</p></div>
+        <div class="glass-card dark reveal"><b>Удобный формат в Telegram</b><p>Тренировки всегда в телефоне — без поездок в зал и привязки к определённому времени.</p></div>
+      </div>
+
+      <div class="price-card glass-card dark reveal-scale" style="--d:.1s">
+        <div class="price-tagline">Весь фитнес-клуб — в&nbsp;твоём телефоне</div>
+        <div class="price-row">
+          <div class="price-title">Сегодня участие в&nbsp;FitFlow</div>
+          <div class="price-value">990&nbsp;₽</div>
+        </div>
+        <div class="timer">
+          <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          Единая цена — для тех, кто вступает в клуб <b>до&nbsp;23:59 сегодня</b>&nbsp;·&nbsp;осталось <span class="countdown" data-countdown>--:--:--</span>
+        </div>
+        <a class="btn btn-light btn-lg" href="checkout.html">
+          Вступить в клуб
+          <svg class="ico" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+        <p class="price-note">После оплаты ты получишь доступ к закрытому онлайн-клубу FitFlow в Telegram.</p>
+        <p class="price-motto"><b>Тренируйся дома. Следуй готовому плану. Получай новую программу каждый месяц.</b></p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-in">
+      <a class="logo" href="#top"><span class="logo-mark">F</span><span class="logo-text light">Fit<i>Flow</i></span></a>
+      <p>Закрытый фитнес-клуб в Telegram. Тренировки и питание в одном месте.</p>
+      <nav class="footer-nav">
+        <a href="#system">О клубе</a>
+        <a href="#how">Как работает</a>
+        <a href="#trainer">Тренер</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <small>© <span id="year">2026</span> FitFlow. Все права защищены.</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

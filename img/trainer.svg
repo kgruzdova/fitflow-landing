@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Алина Соколова — фитнес-тренер FitFlow">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#26262f"/>
+      <stop offset="1" stop-color="#121217"/>
+    </linearGradient>
+    <radialGradient id="glowPink" cx="16%" cy="8%" r="74%">
+      <stop offset="0" stop-color="#ff5c7a" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#ff5c7a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowViolet" cx="88%" cy="90%" r="72%">
+      <stop offset="0" stop-color="#a78bff" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#a78bff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7cdb1"/>
+      <stop offset="1" stop-color="#e5ab8b"/>
+    </linearGradient>
+    <linearGradient id="gear" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e02448"/>
+      <stop offset="1" stop-color="#a78bff"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4b3452"/>
+      <stop offset="1" stop-color="#2c1f34"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#glowPink)"/>
+  <rect width="800" height="1000" fill="url(#glowViolet)"/>
+
+  <circle cx="400" cy="420" r="250" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="2"/>
+  <circle cx="400" cy="420" r="310" fill="none" stroke="#ffffff" stroke-opacity=".05" stroke-width="2"/>
+
+  <!-- ponytail -->
+  <ellipse cx="600" cy="470" rx="62" ry="120" transform="rotate(16 600 470)" fill="url(#hair)"/>
+  <!-- hair back -->
+  <ellipse cx="400" cy="405" rx="186" ry="200" fill="url(#hair)"/>
+
+  <!-- neck -->
+  <rect x="355" y="500" width="90" height="175" rx="45" fill="url(#skin)"/>
+  <ellipse cx="400" cy="598" rx="46" ry="20" fill="#c98f70" opacity=".35"/>
+
+  <!-- torso -->
+  <path d="M60 1000 C70 830 160 715 290 675 C330 663 365 656 400 656 C435 656 470 663 510 675 C640 715 730 830 740 1000 Z" fill="url(#skin)"/>
+
+  <!-- top -->
+  <path d="M290 675 C160 715 70 830 60 1000 L740 1000 C730 830 640 715 510 675 C470 736 330 736 290 675 Z" fill="url(#gear)"/>
+  <path d="M290 675 C330 736 470 736 510 675 C470 750 330 750 290 675 Z" fill="#ffffff" opacity=".18"/>
+
+  <!-- badge with dumbbell -->
+  <g>
+    <circle cx="652" cy="836" r="78" fill="#16161d"/>
+    <circle cx="652" cy="836" r="78" fill="none" stroke="url(#gear)" stroke-width="7"/>
+    <g transform="translate(652 836) rotate(-16)">
+      <rect x="-48" y="-9" width="96" height="18" rx="9" fill="#ececf5"/>
+      <rect x="-74" y="-30" width="26" height="60" rx="11" fill="url(#gear)"/>
+      <rect x="48" y="-30" width="26" height="60" rx="11" fill="url(#gear)"/>
+      <rect x="-42" y="-24" width="16" height="48" rx="7" fill="#ececf5"/>
+      <rect x="26" y="-24" width="16" height="48" rx="7" fill="#ececf5"/>
+    </g>
+  </g>
+
+  <!-- face -->
+  <ellipse cx="400" cy="420" rx="155" ry="170" fill="url(#skin)"/>
+  <!-- fringe -->
+  <path d="M232 445 C235 275 305 205 400 205 C495 205 565 275 568 445 C555 350 490 315 400 315 C310 315 245 350 232 445 Z" fill="url(#hair)"/>
+  <path d="M568 430 C578 372 574 320 556 274 C574 330 572 386 558 448 Z" fill="#241a2b" opacity=".55"/>
+
+  <!-- brows -->
+  <path d="M310 378 q36 -22 70 -6" fill="none" stroke="#3a2a3f" stroke-width="11" stroke-linecap="round"/>
+  <path d="M420 372 q34 -16 70 6" fill="none" stroke="#3a2a3f" stroke-width="11" stroke-linecap="round"/>
+  <!-- eyes -->
+  <path d="M316 424 q30 -30 60 0" fill="none" stroke="#2e2136" stroke-width="12" stroke-linecap="round"/>
+  <path d="M424 424 q30 -30 60 0" fill="none" stroke="#2e2136" stroke-width="12" stroke-linecap="round"/>
+  <!-- nose -->
+  <path d="M400 456 q16 24 -8 32" fill="none" stroke="#c98f70" stroke-width="9" stroke-linecap="round"/>
+  <!-- smile -->
+  <path d="M350 512 q50 46 100 -4" fill="none" stroke="#b8506a" stroke-width="12" stroke-linecap="round"/>
+  <!-- blush -->
+  <ellipse cx="303" cy="486" rx="34" ry="18" fill="#ff7a90" opacity=".3"/>
+  <ellipse cx="497" cy="486" rx="34" ry="18" fill="#ff7a90" opacity=".3"/>
+  <!-- earrings -->
+  <circle cx="252" cy="492" r="13" fill="url(#gear)"/>
+  <circle cx="548" cy="492" r="13" fill="url(#gear)"/>
+</svg>
